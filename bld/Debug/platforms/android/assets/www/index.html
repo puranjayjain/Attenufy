@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Markit</title>
+    <!-- Markit references -->
+    <link href="css/demo.min.css" rel="stylesheet" />
+    <link href="css/icons.min.css" rel="stylesheet" />
+    <link href="css/index.min.css" rel="stylesheet" />
+    <link href="css/normalize.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="content-main">
+        <header>
+            <span class="icon-umbrella"></span>
+        </header>
+        <header>
+            <span class="icon-monitor"></span><span class="icon-tablet"></span><span class="icon-mobile"></span>
+        </header>
+        <p>Welcome to Markit !</p>
+        <div class="morph-button">
+            <button type="button">Login</button>
+        </div>
+        <p>Or</p>
+        <button type="button" class="tutorial icon-video">Tutorial</button>
+    </div>
+    <!-- Login Page -->
+    <div class="content-style-overlay">
+        <span class="close-overlay icon icon-arrow-left"></span>
+        <h2>Enter your Credentials</h2>
+        <label>Username</label>
+        <p><input id="username" type="text" placeholder="e.g U101112FCSXXX" value="U101112FCS110" required><span class="icon-lock"></span><span id="emptytext" class="icon-delete"></span></p>
+        <label>Password</label>
+        <p><input id="password" type="password" placeholder="e.g ********" value="password" required><span class="icon-unlock"></span><span id="emptypassword" class="icon-delete"></span></p>
+        <p><button id="login-button">Login</button></p>
+        <p><a>Forgot Password ?</a></p>
+    </div>
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="js/platformOverrides.min.js"></script>
+    <!-- Jquery reference -->
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/index.min.js"></script>
+    <script src="js/navigations.js"></script>
+    <script>
+        //Trigger Login Page
+        //On Login Button Click Or Swipeleft on Main Page
+        $(".morph-button").on("vclick", loginOpen);
+        $(".content-main").swipe({
+            swipeLeft: function (event, direction, distance, duration, fingerCount) {
+                loginOpen();
+            }
+        });
+        function loginOpen() {
+            login_click();
+            //add nav state
+            window.location = '#login';
+        }
+        //Close on Back Button Click Or Swiperight on Login Page
+        $(".close-overlay").on("vclick", loginClose);
+        $(".content-style-overlay").swipe({
+            swipeRight: function (event, direction, distance, duration, fingerCount) {
+                loginClose();
+            }
+        });
+        function loginClose() {
+            close_login_click();
+            //add nav state
+            history.back();
+            //history.pushState({}, '', $(this).attr("href"));
+            // HISTORY.PUSHSTATE
+            //var href = '#login';
+            //history.pushState('', 'New URL: ' + href, href);
+            //e.preventDefault();
+        }
+        //Clear text in Fields
+        $("#emptytext").on("vclick", function () {
+            $("#username").val("");
+        });
+        $("#emptypassword").on("vclick", function () {
+            $("#password").val("");
+        });
+        //Checking the login fields for data
+        $("#login-button").on("vclick", function () {
+            //if empty
+            if ((($("#username").val().length <= 0) || ($("#password").val().length <= 0)) && (!($(".content-style-overlay input").hasClass("flash")))) {
+                $(".content-style-overlay input").addClass("flash")
+                .delay(4000)
+                .queue(function () {
+                    $(this).removeClass("flash");
+                    $(this).dequeue();
+                });
+            }//Check for validation
+            else {
+                //temp makeshift for mockup ! NOT THE ACTUAL CODE
+                if (($("#username").val().trim() == "U101112FCS110") && ($("#password").val() == "password")) {                    
+                    //authenticate the application
+                    var Authenticate = [];
+                    Authenticate.push({ "Username": "U101112FCS110", "Password": "password", "Type": "Teacher" });
+                    localStorage.setItem("Authenticate", JSON.stringify(Authenticate));
+                    //redirect to main-teacher (for now i'm a teacher)
+                    window.location = "main-teacher.html";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Markit</title>
+    <!-- Markit references -->
+    <link href="css/demo.min.css" rel="stylesheet" />
+    <link href="css/icons.min.css" rel="stylesheet" />
+    <link href="css/main.min.css" rel="stylesheet" />
+    <link href="css/normalize.min.css" rel="stylesheet" />
+    <link href="css/sweet-alert.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="shadow"></div>
+    <div class="left-edge-swiper"></div>
+    <nav class="st-menu" id="menu-4">
+        <p id="profile"><img src="images/1239013_486508811448787_1794451441_n.jpg" /><span>Puranjay Jain</span></p>
+        <ul>
+            <li class="clickable"><a id="mark" class="icon icon-pencil">Mark</a></li>
+            <li class="clickable"><a id="check" class="icon icon-check">Check</a></li>
+            <li class="clickable"><a id="notifications" class="icon icon-bell">Notifications</a></li>
+            <li class="clickable"><a id="scan" class="icon icon-camera">Scan</a></li>
+            <li class="clickable"><a id="settings" class="icon icon-cog swap">Settings</a></li>
+            <li class="clickable"><a id="help" class="icon icon-help swap">Help</a></li>
+            <li class="clickable"><a id="logout" class="icon icon-circle-cross swap">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="title_bar">
+        <!-- data - position as myh,myv,th,tv -->
+        <button data-tooltip="menu,left,top,left,bottom+7" class="menu_button tap-button icon icon-menu ttip"></button>
+        <button data-tooltip="refresh,left,top,left,bottom+7" class="refresh_button tap-button icon icon-reload ttip"></button>
+        <span class="title_span">Mark</span>
+        <button data-tooltip="search,right,top,right-7,bottom+7" class="search_button tap-button icon icon-search ttip"></button>
+    </div>
+    <div class="search_box">
+        <div class="search_title_bar">
+            <button data-tooltip="back,left,top,left+7,bottom+7" class="back_click icon icon-arrow-left ttip"></button><input data-tooltip="search-box,center,top,center,bottom+7" class="search_text ttip" type="search" placeholder="type to search" /><span class="search_bar"></span><button data-tooltip="search button,right,top,right-7,bottom+7" class="search_click icon icon-search ttip"></button>
+        </div>
+        <div class="search_dummy">
+            <span class="icon-command">This looks empty,<br />type to search</span>
+        </div>
+        <div class="search_results"></div>
+    </div>
+    <div class="content-details">
+        <ul>
+            <li><img src="images/1239013_486508811448787_1794451441_n.jpg" /></li>
+            <li><span>Name</span>Puranjay Jain</li>
+            <li><span>Enrollment Number</span>U101112FCS110</li>
+            <li><span>Gender</span>Male</li>
+            <li><span>Course</span>B.Tech</li>
+            <li><span>Year</span>III</li>
+            <li><span>Email</span>puranjay.jain@st.niituniversity.in</li>
+        </ul>
+    </div>
+    <div class="tooltip" style="top: 10px; left: 10px;"></div>
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="js/platformOverrides.js"></script>
+    <script src="js/impulse.min.js"></script>
+    <!-- Jquery reference-->
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/navigations.min.js"></script>
+    <script src="js/main-teacher.js"></script>
+</body>
+</html>

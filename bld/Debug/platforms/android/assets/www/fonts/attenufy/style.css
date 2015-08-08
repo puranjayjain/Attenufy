@@ -1,0 +1,139 @@
+@font-face {
+	font-family: 'attenufy';
+	src:url('fonts/attenufy.eot?-bxfg1f');
+	src:url('fonts/attenufy.eot?#iefix-bxfg1f') format('embedded-opentype'),
+		url('fonts/attenufy.woff?-bxfg1f') format('woff'),
+		url('fonts/attenufy.ttf?-bxfg1f') format('truetype'),
+		url('fonts/attenufy.svg?-bxfg1f#attenufy') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'attenufy';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eye:before {
+	content: "\e000";
+}
+.icon-mail:before {
+	content: "\e002";
+}
+.icon-toggle:before {
+	content: "\e003";
+}
+.icon-layout:before {
+	content: "\e004";
+}
+.icon-bell:before {
+	content: "\e006";
+}
+.icon-lock:before {
+	content: "\e007";
+}
+.icon-unlock:before {
+	content: "\e008";
+}
+.icon-camera:before {
+	content: "\e017";
+}
+.icon-video:before {
+	content: "\e018";
+}
+.icon-printer:before {
+	content: "\e020";
+}
+.icon-monitor:before {
+	content: "\e021";
+}
+.icon-cog:before {
+	content: "\e023";
+}
+.icon-search:before {
+	content: "\e036";
+}
+.icon-circle-cross:before {
+	content: "\e043";
+}
+.icon-umbrella:before {
+	content: "\e060";
+}
+.icon-cloud:before {
+	content: "\e065";
+}
+.icon-cloud-upload:before {
+	content: "\e066";
+}
+.icon-cloud-download:before {
+	content: "\e067";
+}
+.icon-head:before {
+	content: "\e074";
+}
+.icon-briefcase:before {
+	content: "\e075";
+}
+.icon-reload:before {
+	content: "\e080";
+}
+.icon-command:before {
+	content: "\e087";
+}
+.icon-alt:before {
+	content: "\e088";
+}
+.icon-arrow-left:before {
+	content: "\e094";
+}
+.icon-content-right:before {
+	content: "\e100";
+}
+.icon-content-left:before {
+	content: "\e101";
+}
+.icon-grid:before {
+	content: "\e102";
+}
+.icon-trash:before {
+	content: "\e109";
+}
+.icon-plus:before {
+	content: "\e114";
+}
+.icon-check:before {
+	content: "\e116";
+}
+.icon-cross:before {
+	content: "\e117";
+}
+.icon-delete:before {
+	content: "\e119";
+}
+.icon-menu:before {
+	content: "\e120";
+}
+.icon-help:before {
+	content: "\e127";
+}
+.icon-pencil:before {
+	content: "\e600";
+}
+.icon-mobile:before {
+	content: "\e602";
+}
+.icon-mobile2:before {
+	content: "\e603";
+}
+.icon-tablet:before {
+	content: "\e604";
+}

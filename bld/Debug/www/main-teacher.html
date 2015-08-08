@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Markit</title>
+    <!-- Markit references -->
+    <link href="css/demo.min.css" rel="stylesheet" />
+    <link href="css/icons.min.css" rel="stylesheet" />
+    <link href="css/main.min.css" rel="stylesheet" />
+    <link href="css/normalize.min.css" rel="stylesheet" />
+    <link href="css/sweet-alert.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="shadow"></div>
+    <div class="left-edge-swiper"></div>
+    <nav class="st-menu" id="menu-4">
+        <p id="profile"><img src="images/1239013_486508811448787_1794451441_n.jpg" /><span>Puranjay Jain</span></p>
+        <ul>
+            <li class="clickable"><a id="mark" class="icon icon-pencil">Mark</a></li>
+            <li class="clickable"><a id="check" class="icon icon-check">Check</a></li>
+            <li class="clickable"><a id="notifications" class="icon icon-bell">Notifications</a></li>
+            <li class="clickable"><a id="scan" class="icon icon-camera">Scan</a></li>
+            <li class="clickable"><a id="settings" class="icon icon-cog swap">Settings</a></li>
+            <li class="clickable"><a id="help" class="icon icon-help swap">Help</a></li>
+            <li class="clickable"><a id="logout" class="icon icon-circle-cross swap">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="title_bar">
+        <!-- data - position as myh,myv,th,tv -->
+        <button data-tooltip="menu,left,top,left,bottom+7" class="menu_button tap-button icon icon-menu ttip"></button>
+        <button data-tooltip="refresh,left,top,left,bottom+7" class="refresh_button tap-button icon icon-reload ttip"></button>
+        <span class="title_span">Mark</span>
+        <button data-tooltip="search,right,top,right-7,bottom+7" class="search_button tap-button icon icon-search ttip"></button>
+    </div>
+    <div class="search_box">
+        <div class="search_title_bar">
+            <button data-tooltip="back,left,top,left+7,bottom+7" class="back_click icon icon-arrow-left ttip"></button><input data-tooltip="search-box,center,top,center,bottom+7" class="search_text ttip" type="search" placeholder="type to search" /><span class="search_bar"></span><button data-tooltip="search button,right,top,right-7,bottom+7" class="search_click icon icon-search ttip"></button>
+        </div>
+        <div class="search_dummy">
+            <span class="icon-command">This looks empty,<br />type to search</span>
+        </div>
+        <div class="search_results"></div>
+    </div>
+    <div class="content-main visible">
+        <button type="button" class="subject tutorial">Operating Systems</button>
+        <button type="button" class="subject tutorial">Programming in C Language</button>        
+    </div>
+    <div class="expanding-overlay batch">
+        <h3 class="icon-arrow-left">Operating System</h3>
+        <button type="button" class="check icon-plus" data-info="B.Tech I">S1</button>
+        <button type="button" class="check icon-plus" data-info="B.Tech I">S2</button>
+        <button type="button" class="check icon-plus" data-info="B.Tech II">S3</button>
+        <button type="button" class="check icon-plus" data-info="B.Tech I">S4</button>
+        <button type="button" class="check icon-plus" data-info="B.Tech III">S5</button>
+        <button type="button" class="check icon-plus" data-info="B.Tech IV">S6</button>
+        <button id="select_batch" type="button" class="tutorial icon-arrow-left">Done</button>
+    </div>
+    <div class="content-user">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Enrollment No</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button data-tooltip="scroll to top,right-15,center,left,center" class="quick_scroll top icon-arrow-left ttip"></button>
+        <button data-tooltip="scroll to next item,right-15,center,left,center" class="quick_scroll bottom icon-arrow-left ttip"></button>
+        <button class="half-buttons save icon-cloud-upload">Save</button><button class="half-buttons cancel icon-circle-cross">Cancel</button>
+    </div>
+    <div class="tooltip" style="top: 10px; left: 10px;"></div>
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="js/platformOverrides.js"></script>
+    <script src="js/impulse.min.js"></script>
+    <!-- Jquery reference-->
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/sweet-alert.min.js"></script>
+    <script src="js/Details.min.js"></script>
+    <script src="js/navigations.min.js"></script>
+    <script src="js/main-teacher.js"></script>
+</body>
+</html>

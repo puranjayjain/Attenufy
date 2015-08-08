@@ -1,0 +1,124 @@
+/*contains design common to all pages*/
+/*default font*/
+@font-face {
+    font-family: 'graduate';
+    src: url('../fonts/Graduate-Regular.ttf') format('truetype');
+}
+
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    outline: none;    
+    /*-webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;*/ /*some devices*/
+}
+
+.clearfix:before, .clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    background: #5f545a;
+    color: #faf1e0;
+    font-weight: 300;
+    font-family: 'graduate';
+    overflow: hidden;
+}
+
+a, button {
+    /*color: #553445;*/
+    text-decoration: none;
+    outline: none;
+}
+
+    /*a:hover, a:focus {
+        color: #e75854;
+    }*/
+
+/*tooltips*/
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #5f545a;
+    color: #fff;
+    pointer-events: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    z-index: 99999;
+}
+
+    .tooltip.puff {
+        -webkit-animation: puff 0.3s forwards,depuff 0.3s 4s;
+        animation: puff 0.3s forwards,depuff 0.3s 4s;
+    }
+
+/*Animations*/
+@keyframes puff {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    85% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes puff {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    85% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes depuff {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@-webkit-keyframes depuff {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
